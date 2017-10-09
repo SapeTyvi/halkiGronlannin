@@ -1,15 +1,15 @@
 <?php
 	class PostsController {
 		public function index() {
-			$posts = Post:all();
+			$posts = Post::all();
 			require_once('views/posts/index.php');
 		}
 		
-		public function show() {
-			if(!isset($_GET['id']))
+		public function showPosts() {
+			if(!isset($_GET['blogId']))
 				return call('pages', 'error');
 			
-			$post = Post::find($_GET['id']);
+			$post = Post::find($_GET['blogId']);
 			require_once('views/posts/show.php');
 		}
 	}
