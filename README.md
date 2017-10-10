@@ -1,2 +1,1 @@
-# halkiGronlannin
-Hankeharjotus
+ewp theme
