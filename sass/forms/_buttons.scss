@@ -1,0 +1,40 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	
+	
+	display: inline-block;
+	padding: .5em 1.4em;
+	font-family: $font__sans;
+	font-size: 85%;
+	color: #000;
+	line-height: 1.3em;
+	text-decoration: none;
+	border: 1px solid #c3c3c3;
+		
+	&:hover,
+	&:focus {
+		color: #fff;
+		background: $color__interactive;
+		border-color: $color__interactive;
+	/*Muutettu 
+	background-color: $grey;
+	border-radius: 5px;
+	font-size: 18px;
+	padding: 9px 40px;
+	color: #fff;
+	font-weight: 100;
+	border: none;
+
+	&:hover,
+	&:focus {
+		background-color: $dark-grey;
+		color: #fff;*/
+	}
+}
+
+input[value="Lähetä kommentti"] {
+	margin-left: -10px;
+	
+}
