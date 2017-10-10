@@ -9,5 +9,5 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called ewp
+A starter theme called ewp :=)
 
