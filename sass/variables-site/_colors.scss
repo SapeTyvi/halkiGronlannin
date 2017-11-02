@@ -11,10 +11,12 @@ $color__background-ins: #fff9c0;
 $color__text-screen: #000;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: #000;
-$color__link-visited: #000;
+/*$color__link: #000;*/
+$color__link: white;
+$color__link-visited: white;
 $color__link-hover: $color__interactive;
-$color__text-main: #000;
+$color__text-main_alternative: #000;
+$color__text-main: white;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;

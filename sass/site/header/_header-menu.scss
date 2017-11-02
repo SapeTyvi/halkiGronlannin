@@ -4,6 +4,7 @@
 	font-family: $font__sans;
 	font-weight: 400;
 	clear: left;
+	font-size: 1.4rem;
 
 	ul {
 		display: none;
@@ -43,11 +44,13 @@
 
 	li {
 		position: relative;
+		/*Lisätty*/
+		margin-right: 3em;
 	}
 
 	a {
 		display: inline-block;
-		width: 100%;
+		/* poistettu width: 100%;*/
 		padding: .5em 1em .5em 0;
 		text-decoration: none;
 		color: #fff;
@@ -121,6 +124,10 @@ ul.children.toggled-on,
 			display: block;
 			display: flex;
 			flex-wrap: wrap;
+			/*Lisätty*/
+			
+			/*padding-left: 5em;*/
+
 
 			ul {
 				flex-direction: column;
@@ -166,4 +173,11 @@ ul.children.toggled-on,
 		}
 
 	}
+}
+
+.social-menu {
+	position: relative;
+	float: right;
+
+
 }

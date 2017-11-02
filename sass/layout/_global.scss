@@ -1,6 +1,24 @@
 
 #content {
-	background-color: white;
+    background-color: white;
+    background-image: url("images/tausta.png");
+    min-width: 100%;
+    background-position: center;
+    background-attachment: fixed;
+}
+.opacity-white {
+	background-image: url('images/blogiboxi2.png');
+	/*opacity: 0.7;*/
+	padding: 1em;
+	color: white;
+	position: relative;
+}
+
+.opacity-black {
+	background-color: black;
+	opacity: 0.5;
+	padding: 1em;
+	color: white;
 }
 
 .site-content {
@@ -19,6 +37,10 @@
 	margin: 0 auto;
 }
 
+.post-content {
+	
+}
+
 /* Single posts */
 
 
@@ -29,7 +51,7 @@
 		.hentry {
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: space-between;
+			justify-content: space-around;
 
 			.entry-header {
 				width: 100%;
@@ -38,6 +60,7 @@
 
 			.post-content {
 				width: $size__ratio-large;
+				padding: 2em 2em 3em;
 				
 			}
 
@@ -56,7 +79,7 @@
 		}
 		&:not(.has-page-sidebar) {
 			.hentry {
-				justify-content: flex-end;
+				justify-content: space-around;
 			}
 		}
 	}

@@ -37,7 +37,8 @@
 	
 	a {
 		text-decoration: none;
-		color: black;
+		/*color: black;*/
+		color: white;
 		
 		&:focus,
 		&:hover {
@@ -54,11 +55,13 @@
 	a {
 		font-weight: 700;
 		text-decoration: none;
-		color: black;
+		/*color: black;*/
+		color: white;
 		
 		&:focus,
 		&:hover {
-			color: black;
+			/*color: black;*/
+			color: white;
 			border-bottom: 3px solid $color__interactive;
 		}
 	}
@@ -99,6 +102,7 @@
 	
 	.entry-meta {
 		margin-top: 1.5em;
+
 	}
 	
 	@media screen and (min-width: $query__medium) {
@@ -176,7 +180,8 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	/*Poistettu 
+	margin: 1.5em 0 0; */
 	/*Lisätty 7.10*/
 	width: 100%;
 }
