@@ -1,0 +1,47 @@
+.ewp-general-form,
+.ewp-sidebar-preview {
+    display: inline-blog;
+    float: left;
+}
+
+.ewp-sidebar-preview {
+    width: 280px;
+    background-color: #1F1F1F;
+    padding: 20px;
+    text-align: center;
+    margin-right: 20px; 
+}
+
+.ewp-sidebar {
+    display: block;
+    text-align: center;
+}
+
+h1.ewp-username,
+h2.ewp-description {
+    font-weight: 100;
+    color: #fff;
+
+}
+
+h1.ewp-username {
+    font-size: 24px;
+    margin: 0 0 10px;
+
+}
+
+h2.sunset-description {
+    font-size: 13px;
+    margin: 0 0 20px;
+}
+
+.profile-picture {
+    width: 122px;
+    height: 122px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 20px auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

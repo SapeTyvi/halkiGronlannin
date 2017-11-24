@@ -1,0 +1,2767 @@
+@charset "UTF-8";
+/*!
+Theme Name: ewp
+Theme URI: https://github.com/lakda/ewp
+Author: Ricardo Oksa
+Author URI: http://underscores.me/
+Description: My fisrt wordpress theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ewp
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ewp is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*$color__link: #000;*/
+/*$size__ratio-small: 30%;*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 7, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* line 11, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 26, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* line 34, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 39, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* line 44, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+a {
+  background-color: transparent;
+}
+
+/* line 48, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* line 53, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 57, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 62, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 66, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 71, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 76, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 80, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 88, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 92, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 96, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+img {
+  border: 0;
+}
+
+/* line 100, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 104, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/* line 108, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* line 113, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+pre {
+  overflow: auto;
+}
+
+/* line 117, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* line 125, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+/* line 135, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+button {
+  overflow: visible;
+}
+
+/* line 139, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 144, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 152, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/* line 157, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 163, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+input {
+  line-height: normal;
+}
+
+/* line 167, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 173, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* line 178, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 183, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 189, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0;
+}
+
+/* line 194, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 198, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* line 202, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 207, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/_normalize.scss */
+td,
+th {
+  padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/typography/_typography.scss */
+body,
+button,
+input,
+select,
+textarea {
+  color: white;
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 700px) {
+  /* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/typography/_typography.scss */
+  body,
+  button,
+  input,
+  select,
+  textarea {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
+
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/typography/_headings.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: .75em;
+  margin-bottom: .25em;
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  clear: both;
+}
+
+/* line 8, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/typography/_headings.scss */
+h1 {
+  font-size: 2.6em;
+}
+
+/* line 12, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/typography/_headings.scss */
+h2 {
+  font-size: 2.2em;
+}
+
+/* line 16, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/typography/_headings.scss */
+h3 {
+  font-size: 2em;
+}
+
+/* line 20, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/typography/_headings.scss */
+h4 {
+  font-size: 1.8em;
+}
+
+/* line 24, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/typography/_headings.scss */
+h5 {
+  font-size: 1.8em;
+}
+
+/* line 28, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/typography/_headings.scss */
+h6 {
+  font-size: 1.6em;
+}
+
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/typography/_copy.scss */
+p {
+  margin-top: .5em;
+  margin-bottom: 1em;
+  font-size: 16px;
+}
+
+/* line 7, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/typography/_copy.scss */
+dfn, cite, em, i {
+  font-style: italic;
+}
+
+/* line 11, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/typography/_copy.scss */
+blockquote {
+  position: relative;
+  margin: 0 0 1em;
+  background: #eee;
+  padding: 1em 2em .5em 5em;
+  font-style: italic;
+}
+
+/* line 18, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/typography/_copy.scss */
+blockquote:before {
+  position: absolute;
+  top: -.2em;
+  left: -.13em;
+  content: "“";
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-size: 12em;
+  line-height: 100%;
+  color: white;
+}
+
+/* line 30, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/typography/_copy.scss */
+address {
+  margin: 0 0 1.5em;
+}
+
+/* line 34, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/typography/_copy.scss */
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 18.75px;
+  font-size: 1.17188rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+/* line 45, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/typography/_copy.scss */
+code, kbd, tt, var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 18.75px;
+  font-size: 1.17188rem;
+}
+
+/* line 50, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/typography/_copy.scss */
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+/* line 55, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/typography/_copy.scss */
+mark, ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+/* line 60, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/typography/_copy.scss */
+big {
+  font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/elements/_elements.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 5, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/elements/_elements.scss */
+*,
+*:before,
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit;
+}
+
+/* line 11, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/elements/_elements.scss */
+body {
+  background: #fff;
+  /* Fallback for when there is no custom background color defined. */
+}
+
+/* line 15, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/elements/_elements.scss */
+blockquote, q {
+  quotes: "" "";
+  /*&:before,
+	&:after {
+		content: "";
+	}*/
+}
+
+/* line 24, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/elements/_elements.scss */
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/elements/_lists.scss */
+ul, ol {
+  margin: 0 0 1.5em;
+}
+
+/* line 5, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/elements/_lists.scss */
+ul {
+  list-style: disc;
+}
+
+/* line 9, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/elements/_lists.scss */
+ol {
+  list-style: decimal;
+}
+
+/* line 13, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/elements/_lists.scss */
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: .5em;
+}
+
+/* line 19, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/elements/_lists.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 23, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/elements/_lists.scss */
+dd {
+  margin: 0 1.5em 1.5em;
+}
+
+/* line 33, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/elements/_elements.scss */
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+}
+
+/* line 38, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/elements/_elements.scss */
+figure {
+  margin: 0;
+  /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/elements/_tables.scss */
+table {
+  border-collapse: collapse;
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+
+/* line 7, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/elements/_tables.scss */
+thread th {
+  border-bottom: 2px solid #bbb;
+  padding-bottom: .5em;
+}
+
+/* line 12, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/elements/_tables.scss */
+td,
+th {
+  vertical-align: top;
+}
+
+/* line 17, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/elements/_tables.scss */
+th {
+  padding: .4em;
+  text-align: left;
+}
+
+/* line 22, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/elements/_tables.scss */
+tr {
+  border-bottom: 1px solid #eee;
+}
+
+/* line 26, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/elements/_tables.scss */
+td {
+  padding: .4em;
+}
+
+/* line 30, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/elements/_tables.scss */
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+
+/* line 35, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/elements/_tables.scss */
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/forms/_buttons.scss */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  display: inline-block;
+  padding: .5em 1.4em;
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-size: 85%;
+  color: #000;
+  line-height: 1.3em;
+  text-decoration: none;
+  border: 1px solid #c3c3c3;
+}
+
+/* line 16, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/forms/_buttons.scss */
+button:hover, button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  color: #fff;
+  background: #b51c35;
+  border-color: #b51c35;
+  /*Muutettu 
+	background-color: $grey;
+	border-radius: 5px;
+	font-size: 18px;
+	padding: 9px 40px;
+	color: #fff;
+	font-weight: 100;
+	border: none;
+
+	&:hover,
+	&:focus {
+		background-color: $dark-grey;
+		color: #fff;*/
+}
+
+/* line 37, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/forms/_buttons.scss */
+input[value="Lähetä kommentti"] {
+  margin-left: -10px;
+}
+
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/forms/_fields.scss */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-width: 2px;
+  min-height: 40px;
+  height: auto;
+  width: 85%;
+  padding: 5px;
+  margin: 10px 0px 7px 0px;
+}
+
+/* line 25, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/forms/_fields.scss */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_links.scss */
+a {
+  color: white;
+}
+
+/* line 4, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_links.scss */
+a:visited {
+  color: white;
+}
+
+/* line 7, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_links.scss */
+a:hover, a:focus, a:active {
+  color: #b51c35;
+}
+
+/* line 12, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_links.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 15, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_links.scss */
+a:hover, a:active {
+  outline: 0;
+}
+
+/* line 25, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_links.scss */
+.page-content a,
+.entry-content a,
+.entry-summary a,
+.comment-content a {
+  text-decoration: none;
+  border-bottom: 3px solid #b51c35;
+}
+
+/* line 29, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_links.scss */
+.page-content a:hover, .page-content a:focus,
+.entry-content a:hover,
+.entry-content a:focus,
+.entry-summary a:hover,
+.entry-summary a:focus,
+.comment-content a:hover,
+.comment-content a:focus {
+  color: #b51c35;
+}
+
+/*--------------------------------------------------------------
+## Content Navigation
+--------------------------------------------------------------*/
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_content-navigation.scss */
+.comment-navigation,
+.posts-navigation,
+.post-navigation,
+.paging-navigation {
+  padding: 2em 0;
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  text-align: left;
+  overflow: hidden;
+}
+
+/* line 10, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_content-navigation.scss */
+.comment-navigation a,
+.posts-navigation a,
+.post-navigation a,
+.paging-navigation a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  padding: 1em;
+  border: 1px solid #cccccc;
+  color: black;
+}
+
+/* line 18, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_content-navigation.scss */
+.comment-navigation a:hover, .comment-navigation a:focus,
+.posts-navigation a:hover,
+.posts-navigation a:focus,
+.post-navigation a:hover,
+.post-navigation a:focus,
+.paging-navigation a:hover,
+.paging-navigation a:focus {
+  color: white;
+  border-color: #b51c35;
+  background: #b51c35;
+}
+
+/* line 29, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_content-navigation.scss */
+.nav-links {
+  margin: 0 auto;
+  padding: 0 .4em;
+}
+
+/* line 34, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_content-navigation.scss */
+.nav-previous {
+  padding-bottom: 1em;
+}
+
+@media screen and (min-width: 900px) {
+  /* line 40, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_content-navigation.scss */
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0;
+  }
+  /* line 51, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_content-navigation.scss */
+  .comment-navigation .nav-previous,
+  .comment-navigation .nav-next,
+  .posts-navigation .nav-previous,
+  .posts-navigation .nav-next,
+  .post-navigation .nav-previous,
+  .post-navigation .nav-next {
+    float: left;
+    display: flex;
+    align-items: stretch;
+    width: 48%;
+  }
+  /* line 59, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_content-navigation.scss */
+  .comment-navigation .nav-next,
+  .posts-navigation .nav-next,
+  .post-navigation .nav-next {
+    float: right;
+    text-align: right;
+  }
+  /* line 65, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_content-navigation.scss */
+  .nav-previous {
+    padding-bottom: 0;
+  }
+}
+
+/* line 74, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_content-navigation.scss */
+.post-navigation .meta-nav {
+  display: block;
+}
+
+@media screen and (min-width: 30em) {
+  /* line 72, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_content-navigation.scss */
+  .post-navigation {
+    padding-bottom: 1em;
+  }
+}
+
+/* line 82, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_content-navigation.scss */
+.post-navigation .post-title {
+  font-size: 1.2em;
+  font-weight: 700;
+  border-bottom: 3px solid #b51c35;
+}
+
+/* line 88, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_content-navigation.scss */
+.post-navigation a:hover .post-title,
+.post-navigation a:focus .post-title {
+  border-bottom-color: white;
+}
+
+/* line 95, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_content-navigation.scss */
+.pagination {
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+/* line 99, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_content-navigation.scss */
+.pagination .nav-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* line 105, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_content-navigation.scss */
+.pagination a,
+.pagination span {
+  padding: .5em 1em;
+  background: white;
+}
+
+/* line 111, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_content-navigation.scss */
+.pagination a {
+  text-decoration: none;
+}
+
+/* line 114, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_content-navigation.scss */
+.pagination a:focus, .pagination a:hover {
+  color: white;
+  background: #b51c35;
+}
+
+/* line 121, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_content-navigation.scss */
+.pagination .current {
+  font-weight: 600;
+  color: #b51c35;
+}
+
+/* line 126, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_content-navigation.scss */
+.pagination .prev .icon {
+  margin-right: 1em;
+}
+
+/* line 130, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/navigation/_content-navigation.scss */
+.pagination .next .icon {
+  margin-left: 1em;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+/* line 2, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/modules/_accessibility.scss */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+/* line 10, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/modules/_accessibility.scss */
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #000;
+  display: block;
+  font-size: 17.5px;
+  font-size: 1.09375rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+/* line 31, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/modules/_accessibility.scss */
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/modules/_alignments.scss */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+/* line 7, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/modules/_alignments.scss */
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+/* line 13, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/modules/_alignments.scss */
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/modules/_clearings.scss */
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
+
+/* line 15, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/modules/_clearings.scss */
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+  clear: both;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Global layout
+--------------------------------------------------------------*/
+/* line 2, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/layout/_global.scss */
+#content {
+  background-color: white;
+  background-image: url("images/tausta.png");
+  min-width: 100%;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* line 9, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/layout/_global.scss */
+.opacity-white {
+  background-image: url("images/blogiboxi2.png");
+  /*opacity: 0.7;*/
+  padding: 1em;
+  color: white;
+  position: relative;
+}
+
+/* line 17, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/layout/_global.scss */
+.opacity-black {
+  background-color: black;
+  opacity: 0.5;
+  padding: 1em;
+  color: white;
+}
+
+/* line 24, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/layout/_global.scss */
+.site-content {
+  padding: 1em;
+}
+
+@media screen and (min-width: 600px) {
+  /* line 24, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/layout/_global.scss */
+  .site-content {
+    padding: 2em;
+  }
+}
+
+/* line 33, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/layout/_global.scss */
+.site-content {
+  max-width: 1440px;
+  /*max-width: $size__max-width;*/
+  margin: 0 auto;
+}
+
+/* Single posts */
+@media screen and (min-width: 900px) {
+  /* line 51, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/layout/_global.scss */
+  .single.has-sidebar .hentry,
+  .page .hentry {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  /* line 56, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/layout/_global.scss */
+  .single.has-sidebar .hentry .entry-header,
+  .page .hentry .entry-header {
+    width: 100%;
+    flex: 1 0 100%;
+  }
+  /* line 61, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/layout/_global.scss */
+  .single.has-sidebar .hentry .post-content,
+  .page .hentry .post-content {
+    width: 60%;
+    padding: 2em 2em 3em;
+  }
+  /* line 67, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/layout/_global.scss */
+  .single.has-sidebar .hentry .widget-area,
+  .page .hentry .widget-area {
+    width: 20%;
+  }
+  /* line 76, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/layout/_global.scss */
+  .page.has-page-sidebar .hentry {
+    flex-direction: row-reverse;
+  }
+  /* line 81, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/layout/_global.scss */
+  .page:not(.has-page-sidebar) .hentry {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  /* line 93, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/layout/_global.scss */
+  .single.no-sidebar .post-content__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  /* line 97, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/layout/_global.scss */
+  .single.no-sidebar .post-content__wrap .entry-meta {
+    width: 20%;
+  }
+  /* line 101, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/layout/_global.scss */
+  .single.no-sidebar .post-content__wrap .post-content__body {
+    width: 70%;
+  }
+}
+
+/*--------------------------------------------------------------
+## Archives
+--------------------------------------------------------------*/
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/archive/_archive.scss */
+.archive-view {
+  background-color: #eee;
+}
+
+/* line 4, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/archive/_archive.scss */
+.archive-view .post,
+.archive-view .page {
+  position: relative;
+  /*background: white;*/
+  /*opacity: 0.7;*/
+  background-image: url("images/blogiboxi.png");
+}
+
+/* line 12, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/archive/_archive.scss */
+.archive-view .post__content {
+  padding: 2em 2em 3em;
+}
+
+@media screen and (min-width: 900px) {
+  /* line 18, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/archive/_archive.scss */
+  .archive-view.has-sidebar .site-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  /* line 24, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/archive/_archive.scss */
+  .archive-view.has-sidebar .page-header {
+    width: 100%;
+    flex: 1 0 100%;
+  }
+  /* line 28, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/archive/_archive.scss */
+  .archive-view.has-sidebar .content-area {
+    width: 60%;
+  }
+  /* line 33, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/archive/_archive.scss */
+  .archive-view.has-sidebar .widget-area {
+    width: 20%;
+    margin-left: 4em;
+  }
+}
+
+/* line 42, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/archive/_archive.scss */
+.page-header {
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+/* line 46, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/archive/_archive.scss */
+.page-title {
+  margin: 0 0 .5em;
+}
+
+/* line 50, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/archive/_archive.scss */
+.archive-description {
+  margin: -1em 0 2em;
+}
+
+/* For content-none.php */
+/* line 58, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/archive/_archive.scss */
+.search .page-content,
+.error-404 .page-content {
+  margin-bottom: 2em;
+  padding: 1em 2em;
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  color: white;
+  background: #b51c35;
+}
+
+/* line 66, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/archive/_archive.scss */
+.search input[type="search"],
+.error-404 input[type="search"] {
+  padding: .5em;
+}
+
+/* line 69, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/archive/_archive.scss */
+.search input[type="submit"],
+.error-404 input[type="submit"] {
+  border-color: white;
+  color: white;
+}
+
+/* line 73, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/archive/_archive.scss */
+.search input[type="submit"]:focus, .search input[type="submit"]:hover,
+.error-404 input[type="submit"]:focus,
+.error-404 input[type="submit"]:hover {
+  color: black;
+}
+
+/*.sticky::before {
+    content: "";
+    display: block;
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-width: 0 2em 2em 0;
+    border-color: #eee #eee white;
+    border-style: solid;
+    box-shadow: -1px 2px 2px hsla(0, 0%, 10%, .1);
+}
+*/
+/* line 96, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/archive/_archive.scss */
+.index-image img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 102, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/archive/_archive.scss */
+.index-image a:focus > img,
+.index-image a:hover > img {
+  opacity: .8;
+}
+
+/* line 109, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/archive/_archive.scss */
+.continue-reading {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+/* line 115, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/archive/_archive.scss */
+.continue-reading a {
+  display: block;
+  padding: .5em 1em;
+  font-size: 90%;
+  text-decoration: none;
+  background: #d9d9d9;
+}
+
+/* line 122, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/archive/_archive.scss */
+.continue-reading a:focus, .continue-reading a:hover {
+  color: white;
+  background: #b51c35;
+}
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header.scss */
+.header-image {
+  max-height: 60vh;
+  overflow: hidden;
+}
+
+/* line 6, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header.scss */
+.header-image img {
+  display: block;
+  width: 100vw;
+}
+
+/* line 13, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header.scss */
+.site-header {
+  position: relative;
+  padding: 1em;
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  color: #fff;
+  background-color: #002254;
+}
+
+@media screen and (min-width: 600px) {
+  /* line 13, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header.scss */
+  .site-header {
+    padding: 1em 2em;
+  }
+}
+
+/* line 25, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header.scss */
+.site-branding {
+  min-height: 65px;
+  display: none;
+}
+
+/* line 30, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header.scss */
+.site-title {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6em;
+  font-weight: 900;
+  line-height: 1em;
+}
+
+/* line 37, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header.scss */
+.site-title a {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 41, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header.scss */
+.site-title a:hover, .site-title a:focus {
+  text-decoration: underline;
+}
+
+/* line 48, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header.scss */
+.site-description {
+  margin: 0;
+  font-size: .9em;
+  font-style: italic;
+  font-weight: 100;
+}
+
+@media screen and (min-width: 900px) {
+  /* line 57, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header.scss */
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  /* line 62, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header.scss */
+  .site-branding {
+    width: 35%;
+    flex: 1 0 auto;
+  }
+  /* line 67, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header.scss */
+  .site-navigation {
+    width: 55%;
+  }
+}
+
+/*--------------------------------------------------------------
+## Header-menu
+--------------------------------------------------------------*/
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+.main-navigation {
+  display: block;
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-weight: 400;
+  clear: left;
+  font-size: 1.4rem;
+}
+
+/* line 9, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+.main-navigation ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding-top: 1em;
+  padding-left: 0;
+}
+
+/* line 16, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+.main-navigation ul ul {
+  display: none;
+  top: 1.5em;
+  z-index: 99999;
+}
+
+/* line 21, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+.main-navigation ul ul ul {
+  top: 0;
+}
+
+/* line 25, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+.main-navigation ul ul li {
+  padding-left: 1em;
+}
+
+/* line 28, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+  left: 100%;
+}
+
+/* line 34, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+.main-navigation ul ul a {
+  width: 200px;
+}
+
+/* line 39, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+  left: auto;
+}
+
+/* line 45, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+.main-navigation li {
+  position: relative;
+  /*Lisätty*/
+  margin-right: 3em;
+}
+
+/* line 51, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+.main-navigation a {
+  display: inline-block;
+  /* poistettu width: 100%;*/
+  padding: .5em 1em .5em 0;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* line 59, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+.main-navigation a:hover,
+.main-navigation a:focus {
+  text-decoration: underline;
+}
+
+/* line 70, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+.main-navigation .menu-item-has-children,
+.main-navigation .page_item_has_children {
+  min-width: 218px;
+}
+
+/* line 74, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+.main-navigation .menu-item-has-children > a,
+.main-navigation .page_item_has_children > a {
+  padding-right: 2em;
+}
+
+/* line 80, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+button.dropdown-toggle {
+  position: absolute;
+  right: 0;
+  border: none;
+  background: inherit;
+  color: white;
+  line-height: 1.5em;
+  padding: .4em 1em .4em .5em;
+}
+
+/* line 90, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+.menu-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  margin: 1.2em 1.2em 0 0;
+  padding: .6em .8em;
+  font-size: 80%;
+  text-transform: uppercase;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Toggle small menu and children on */
+/* line 104, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+.toggled-on ul,
+ul.children.toggled-on,
+.sub-menu.toggled-on {
+  display: block;
+}
+
+@media screen and (min-width: 600px) {
+  /* line 111, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+  .menu-toggle {
+    display: none;
+  }
+  /* line 117, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+  .main-navigation .menu-item-has-children > a,
+  .main-navigation .page_item_has_children > a {
+    padding-right: 2em;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  /* line 123, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+  .main-navigation ul {
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    /*Lisätty*/
+    /*padding-left: 5em;*/
+  }
+  /* line 132, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+  .main-navigation ul ul {
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    margin-left: 0;
+  }
+  /* line 137, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+  .main-navigation ul ul li {
+    padding-left: 0;
+  }
+  /* line 140, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+  .main-navigation ul ul li a {
+    width: 218px;
+    background: none;
+  }
+  /* line 149, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+  .main-navigation ul li a {
+    padding: .4em 1em;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  /* line 162, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+  .main-navigation ul {
+    justify-content: flex-end;
+    padding-top: 0;
+    /* If you want dropdowns to open on hover, uncomment this: */
+  }
+  /* line 168, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+  .main-navigation ul li:hover > ul,
+  .main-navigation ul li:focus > ul {
+    display: block;
+  }
+}
+
+/* line 178, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/header/_header-menu.scss */
+.social-menu {
+  position: relative;
+  float: right;
+}
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.sticky {
+  display: block;
+}
+
+/* line 5, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.hentry {
+  margin: 0 0 1.5em;
+}
+
+/* line 9, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.entry-header {
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+/* line 13, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.cat-links {
+  font-size: 90%;
+  font-weight: 700;
+}
+
+/* line 17, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.cat-links a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #b51c35;
+}
+
+/* line 22, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.cat-links a:focus, .cat-links a:hover {
+  background-color: #b51c35;
+  color: white;
+}
+
+/* line 30, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.entry-title {
+  margin: .125em 0 .25em;
+  font-size: 2.5em;
+}
+
+@media screen and (min-width: 900px) {
+  /* line 30, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+  .entry-title {
+    font-size: 2.5em;
+  }
+}
+
+/* line 38, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.entry-title a {
+  text-decoration: none;
+  /*color: black;*/
+  color: white;
+}
+
+/* line 43, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.entry-title a:focus, .entry-title a:hover {
+  border-bottom: 5px solid #b51c35;
+}
+
+/* line 50, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.entry-meta,
+.entry-footer {
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-size: 90%;
+}
+
+/* line 55, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.entry-meta a,
+.entry-footer a {
+  font-weight: 700;
+  text-decoration: none;
+  /*color: black;*/
+  color: white;
+}
+
+/* line 61, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.entry-meta a:focus, .entry-meta a:hover,
+.entry-footer a:focus,
+.entry-footer a:hover {
+  /*color: black;*/
+  color: white;
+  border-bottom: 3px solid #b51c35;
+}
+
+/* line 71, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.byline::after {
+  content: "|";
+  margin: 0 .5em;
+}
+
+/* line 79, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.comments-link::before,
+.edit-link::before {
+  content: "|";
+  margin: 0 .5em;
+}
+
+/* line 85, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.byline,
+.updated:not(.published) {
+  display: none;
+}
+
+/* line 90, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.single .byline,
+.group-blog .byline {
+  display: inline;
+}
+
+/* line 95, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.extra {
+  display: none;
+}
+
+/* Custom Post Meta rules for single post / no sidebar. */
+/* line 103, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.no-sidebar .entry-meta {
+  margin-top: 1.5em;
+}
+
+@media screen and (min-width: 900px) {
+  /* line 111, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+  .no-sidebar .post-content__wrap .entry-meta {
+    margin-top: 2.25em;
+    font-size: 80%;
+  }
+  /* line 115, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+  .no-sidebar .post-content__wrap .entry-meta a {
+    font-size: 110%;
+    display: block;
+    border-bottom: 3px solid white;
+  }
+  /* line 120, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+  .no-sidebar .post-content__wrap .entry-meta a:hover, .no-sidebar .post-content__wrap .entry-meta a:focus {
+    border-bottom-color: #b51c35;
+  }
+  /* line 127, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+  .no-sidebar .post-content__wrap .byline,
+  .no-sidebar .post-content__wrap .posted-on,
+  .no-sidebar .post-content__wrap .comments-link,
+  .no-sidebar .post-content__wrap .edit-link {
+    display: block;
+    margin-bottom: 1em;
+  }
+  /* line 134, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+  .no-sidebar .post-content__wrap .byline:before, .no-sidebar .post-content__wrap .byline:after,
+  .no-sidebar .post-content__wrap .posted-on:before,
+  .no-sidebar .post-content__wrap .posted-on:after,
+  .no-sidebar .post-content__wrap .comments-link:before,
+  .no-sidebar .post-content__wrap .comments-link:after,
+  .no-sidebar .post-content__wrap .edit-link:before,
+  .no-sidebar .post-content__wrap .edit-link:after {
+    margin: 0;
+    content: "";
+  }
+  /* line 141, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+  .no-sidebar .post-content__wrap .extra {
+    display: inline;
+  }
+}
+
+/* Single Post Featured Images */
+/* line 151, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.full-bleed {
+  width: 100vw;
+  max-height: 1200px;
+  margin-top: 1em;
+  margin-left: -1em;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 600px) {
+  /* line 151, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+  .full-bleed {
+    margin-left: -2em;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  /* line 151, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+  .full-bleed {
+    margin-top: -2em;
+    margin-right: -2em;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  /* line 151, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+  .full-bleed {
+    margin-right: calc( ((-100vw + 1080px)/2) - 2em);
+    margin-left: calc( ((-100vw + 1080px)/2) - 2em);
+  }
+}
+
+/* line 173, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.full-bleed img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 180, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.page-content,
+.entry-content,
+.entry-summary {
+  /*Poistettu 
+	margin: 1.5em 0 0; */
+  /*Lisätty 7.10*/
+  width: 100%;
+}
+
+/* line 189, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+/* line 194, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_posts-and-pages.scss */
+.entry-footer {
+  margin: 1.5em 0;
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comments-area {
+  width: 100%;
+  margin: 3em 0;
+  padding: 1.5em 0;
+  border-top: 1px solid #cccccc;
+}
+
+/* line 8, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comments-title {
+  margin-bottom: 2em;
+  font-size: 2.5em;
+  font-weight: 900;
+}
+
+/* line 14, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+/* line 19, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment-list ol {
+  list-style-type: none;
+}
+
+/* line 24, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment-body {
+  border-bottom: 1px solid #c3c3c3;
+  margin-bottom: 3em;
+}
+
+/* line 29, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment-meta {
+  position: relative;
+  margin-left: 70px;
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-size: 80%;
+}
+
+/* line 38, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment-meta a,
+.comment-form a {
+  text-decoration: none;
+  border: none;
+}
+
+/* line 42, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment-meta a:hover, .comment-meta a:focus,
+.comment-form a:hover,
+.comment-form a:focus {
+  text-decoration: underline;
+}
+
+/* line 51, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment .avatar {
+  position: absolute;
+  top: -5px;
+  left: -70px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+/* line 62, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.children {
+  margin-left: 1em;
+  padding-left: 0;
+}
+
+@media screen and (min-width: 900px) {
+  /* line 62, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+  .children {
+    margin-left: 2em;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  /* line 73, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+  .no-sidebar .children {
+    margin-left: 2em;
+  }
+  /* line 79, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+  .no-sidebar .children .comment-meta {
+    margin-left: 80px;
+    font-size: 90%;
+  }
+  /* line 84, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+  .no-sidebar .children .comment .avatar {
+    top: -7px;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+  }
+  /* line 91, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+  .no-sidebar .children .comment-content {
+    margin-left: 80px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  /* line 101, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+  .no-sidebar .children {
+    margin-left: 3em;
+  }
+  /* line 105, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+  .no-sidebar .comment-meta {
+    margin-left: 90px;
+  }
+  /* line 109, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+  .no-sidebar .comment .avatar {
+    top: -8px;
+    left: -90px;
+    width: 70px;
+    height: 70px;
+  }
+  /* line 116, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+  .no-sidebar .comment-content {
+    margin-left: 90px;
+  }
+}
+
+/* line 124, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment-metadata {
+  margin-top: .2em;
+  padding-bottom: .5em;
+  font-size: .8em;
+  line-height: 1em;
+}
+
+/* line 130, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment-metadata a {
+  color: #7D7D7D;
+}
+
+/* line 133, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment-metadata a:hover, .comment-metadata a:focus {
+  border-color: #c3c3c3;
+}
+
+/* line 140, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment-author {
+  font-size: 1.4em;
+  line-height: 1.3em;
+}
+
+/* line 145, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.says {
+  font-size: 80%;
+  /*display: none;*/
+}
+
+/* line 150, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.reply {
+  margin-bottom: 1.5em;
+  text-align: right;
+}
+
+/* line 154, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.reply a {
+  display: inline-block;
+  padding: .5em 1.4em;
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-size: 85%;
+  color: #000;
+  line-height: 1.3em;
+  text-decoration: none;
+  border: 1px solid #c3c3c3;
+}
+
+/* line 164, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.reply a:hover, .reply a:focus {
+  color: #fff;
+  background: #b51c35;
+  border-color: #b51c35;
+}
+
+/* line 176, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment-content ol {
+  list-style-type: decimal;
+}
+
+/* line 180, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment-content a {
+  word-wrap: break-word;
+}
+
+/* line 186, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.bypostauthor .avatar {
+  box-sizing: content-box;
+  border: 5px solid #b51c35;
+  margin-top: -5px;
+  margin-left: -5px;
+}
+
+/* Comment Form */
+/* line 196, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment-reply-title {
+  margin-bottom: 1em;
+}
+
+/* line 200, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment-list .comment-reply-title {
+  text-align: left;
+}
+
+/* line 204, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment-form {
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  line-height: 1.3em;
+}
+
+/* line 208, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment-form a {
+  font-weight: 500;
+}
+
+/* line 212, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment-form .form-submit {
+  /*text-align: right;*/
+  text-align: cemter;
+}
+
+/* line 217, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment-form .form-submit input {
+  padding: .5em 1.4em;
+  font-size: 85%;
+  color: #000;
+  line-height: 1.3em;
+  text-decoration: none;
+  border: 1px solid #c3c3c3;
+}
+
+/* line 225, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment-form .form-submit input:hover, .comment-form .form-submit input:focus {
+  color: #fff;
+  background: #b51c35;
+  border-color: #b51c35;
+}
+
+/* line 234, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment-form label {
+  width: 33%;
+  display: block;
+  font-style: italic;
+  padding-bottom: .4em;
+}
+
+/* line 241, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.comment-form .required {
+  color: #D54E21;
+}
+
+/* line 246, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.pingback {
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+/* line 249, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.pingback .comment-body {
+  padding: 1em 0;
+}
+
+/* line 253, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/primary/_comments.scss */
+.pingback a {
+  font-style: italic;
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/footer/_footer.scss */
+.site-footer {
+  position: relative;
+  padding: 1em;
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  color: #fff;
+  background-color: #002254;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  /* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/footer/_footer.scss */
+  .site-footer {
+    padding: 1em 2em;
+  }
+}
+
+/* line 16, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/footer/_footer.scss */
+.social-menu ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 24, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/footer/_footer.scss */
+.social-menu ul a {
+  display: block;
+  padding: .5em 1em;
+  color: #393a35;
+  text-decoration: none;
+}
+
+/* line 31, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/footer/_footer.scss */
+.social-menu ul a:hover, .social-menu ul a:focus {
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget-area {
+  /*margin-top: 1.5em;*/
+  text-align: right;
+}
+
+/* Footer widgets for archive pages */
+@media screen and (min-width: 900px) {
+  /* line 10, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+  .archive-view.has-sidebar .footer-widgets {
+    width: 100%;
+  }
+}
+
+/* line 17, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget {
+  margin: 0 0 2em;
+  padding: 0 0 2em;
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  /* Make sure select elements fit in widgets. */
+}
+
+/* line 22, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget ul,
+.widget ol {
+  padding: .7em 0 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+/* line 28, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget ul li,
+.widget ol li {
+  display: block;
+  line-height: 2em;
+}
+
+/* line 32, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget ul li ul,
+.widget ul li ol,
+.widget ol li ul,
+.widget ol li ol {
+  margin-left: .5em;
+}
+
+@media screen and (min-width: 30em) {
+  /* line 32, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+  .widget ul li ul,
+  .widget ul li ol,
+  .widget ol li ul,
+  .widget ol li ol {
+    margin-left: 1em;
+  }
+}
+
+/* line 44, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* line 48, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget a:hover, .widget a:focus {
+  border-bottom: 3px solid #b51c35;
+}
+
+/* line 55, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget select {
+  width: 100%;
+  height: 2.5em;
+  padding: 10px;
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  border: 1px solid #ccc;
+}
+
+/* line 65, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget-title {
+  margin-top: 0;
+  margin-bottom: .5em;
+  font-size: 1.4em;
+}
+
+/* Archive and Categories widgets */
+/* line 72, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget_archive li {
+  color: #7D7D7D;
+}
+
+/* line 76, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget_categories .children {
+  padding-top: 0;
+}
+
+/* Search widget. */
+/* line 81, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget_search .search-submit {
+  display: none;
+}
+
+/* Pages and Menu widgets */
+/* line 86, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget_pages .children,
+.widget_nav_menu .sub-menu {
+  padding-top: 0;
+  padding-bottom: .5em;
+}
+
+/* line 95, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget_pages a,
+.widget_nav_menu a {
+  display: block;
+  padding: 1em 0;
+  text-decoration: none;
+  border-bottom: 1px dashed gray;
+}
+
+/* line 101, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget_pages a:hover, .widget_pages a:focus,
+.widget_nav_menu a:hover,
+.widget_nav_menu a:focus {
+  text-decoration: none;
+  border-bottom: 1px dashed gray;
+}
+
+/* line 108, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget_pages li,
+.widget_nav_menu li {
+  padding: 0;
+}
+
+/* Meta widget */
+/* line 117, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget_meta li {
+  padding: 0;
+}
+
+/* Recent comments */
+/* line 124, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget_recent_comments li {
+  line-height: 1.3em;
+  padding-bottom: .5em;
+}
+
+/* line 129, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget_recent_comments a:hover,
+.widget_recent_comments a:focus {
+  padding-left: 0;
+}
+
+/* RSS widget */
+/* line 137, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget_rss li {
+  margin-bottom: 1em;
+}
+
+/* line 140, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget li a.rsswidget {
+  padding-right: .5em;
+  font-size: 1em;
+  line-height: 1.4em;
+}
+
+/* line 146, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.rss-date,
+.widget_rss cite {
+  color: #333;
+  font-size: .8em;
+}
+
+/* line 152, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.rssSummary {
+  padding: .5em 0;
+  font-family: "PT Serif", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: .8em;
+  line-height: 1.4em;
+}
+
+/* Search widget */
+/* line 160, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget_search input[type="search"] {
+  box-sizing: border-box;
+  width: 100%;
+  padding: .5em 1em;
+  border: 1px solid #c3c3c3;
+  border-radius: 0;
+}
+
+/* Calendar widget */
+/* line 169, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget_calendar {
+  font-weight: 400;
+}
+
+/* line 172, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget_calendar caption {
+  padding: .5em 0;
+  font-size: 1em;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* line 179, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget_calendar thead {
+  background: transparent;
+  color: black;
+}
+
+/* line 183, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget_calendar thead th {
+  border-bottom-width: 2px;
+}
+
+/* line 188, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget_calendar td {
+  padding: .2em;
+  font-size: .8em;
+  text-align: center;
+  background: white;
+  border: 1px solid #cccccc;
+}
+
+/* line 196, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget_calendar th {
+  border: none;
+  text-align: center;
+}
+
+/* line 201, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget_calendar .pad {
+  background: #eaeaea;
+}
+
+/* line 205, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.widget_calendar a {
+  font-weight: 900;
+  text-decoration: none;
+}
+
+/* Text widget */
+/* line 213, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.textwidget {
+  font-size: 80%;
+  line-height: 1.3em;
+}
+
+/* Footer widget stylings */
+/* line 222, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.footer-widgets {
+  margin: 2em 0 0;
+  padding: 1em 0;
+  background-color: #1a1a1a;
+}
+
+@media screen and (min-width: 600px) {
+  /* line 222, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+  .footer-widgets {
+    padding: 2em 1em;
+  }
+}
+
+/* line 231, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.footer-widgets .widget {
+  flex: 1;
+  margin: 0 1em 2em;
+  padding-top: 1em;
+}
+
+/* line 236, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.footer-widgets .widget .original-title {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* line 241, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.footer-widgets .widget,
+.footer-widgets .widget-title,
+.footer-widgets .widget a,
+.footer-widgets .widget_calendar thead,
+.footer-widgets .rss-date,
+.footer-widgets .widget_rss cite {
+  color: white;
+}
+
+/* line 250, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.footer-widgets .widget_calendar td,
+.footer-widgets .widget_calendar a {
+  color: black;
+}
+
+@media screen and (min-width: 900px) {
+  /* line 222, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+  .footer-widgets {
+    /* Use flex to create a responsive layout */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* If only one widget is displayed, make it full width. */
+    /* If 2 or 3 widgets are displayed, make the second one twice as wide. */
+    /* If 4 or more widgets are displayed, show three across when available. */
+  }
+  /* line 262, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+  .footer-widgets .widget:only-of-type {
+    width: 100%;
+  }
+  /* line 267, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+  .footer-widgets .widget:nth-last-child(n+2):nth-last-child(-n+3):first-child ~ .widget:nth-child(2) {
+    flex: 2;
+  }
+  /* line 272, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+  .footer-widgets .widget:nth-last-child(n+4),
+  .footer-widgets .widget:nth-last-child(n+4) ~ .widget {
+    width: 30%;
+    flex: 1 1 30%;
+  }
+}
+
+/* Admin sidebar */
+/* line 282, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.ewp-admin-sidebar {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #B8B8B8;
+  color: #ffffff;
+  height: 100vh;
+  width: 100%;
+  max-width: 280px;
+  opacity: 0.9;
+  -webkit-transition: transform 320ms ease;
+  -moz-transition: transform 320ms ease;
+  -ms-transition: transform 320ms ease;
+  -o-transition: transform 320ms ease;
+  transition: transform 320ms ease;
+}
+
+/* line 296, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.ewp-admin-sidebar.sidebar-closed {
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+/* line 301, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.ewp-admin-sidebar-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  padding-top: 40px;
+}
+
+/* line 309, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.admin-sidebar-close,
+.admin-sidebar-open {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* line 318, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.admin-sidebar-close:hover, .admin-sidebar-close:focus,
+.admin-sidebar-open:hover,
+.admin-sidebar-open:focus {
+  color: #b51c35;
+}
+
+/* line 324, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.admin-sidebar-open {
+  left: auto;
+  right: 20px;
+  top: 40px;
+  font-size: 10px;
+}
+
+/* line 331, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.ewp-admin-sidebar-picture {
+  width: 122px;
+  height: 122px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 20px auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 343, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+#secondary h1.ewp-username, h2.ewp-description, i {
+  color: #000;
+}
+
+/* line 346, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+#secondary .ewp-custom-widget {
+  margin-left: 6em;
+}
+
+/* line 349, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.ewp-custom-widget {
+  width: 12em;
+  text-align: center;
+  margin-left: 7px;
+}
+
+/* line 354, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.ewp-general-form,
+.ewp-sidebar-preview {
+  display: inline-blog;
+  float: left;
+}
+
+/* line 360, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.ewp-sidebar-preview {
+  width: 280px;
+  background-color: #1F1F1F;
+  padding: 20px;
+  text-align: center;
+  margin-right: 20px;
+}
+
+/* line 368, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.ewp-sidebar {
+  display: block;
+  text-align: center;
+}
+
+/* line 373, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.ewp-icon-sidebar {
+  color: #000000;
+  padding: 2px;
+}
+
+/* line 380, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+h1.ewp-username,
+h2.ewp-description {
+  font-weight: 100;
+  color: #000000;
+}
+
+/* line 387, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+h1.ewp-username {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+/* line 393, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+h2.ewp-description {
+  font-size: 13px;
+  margin: 0 0 20px;
+}
+
+/* line 398, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.profile-picture {
+  width: 122px;
+  height: 122px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 20px auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 409, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+#admin-sidebar-secondary {
+  width: 50%;
+}
+
+/* line 414, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.icon-grey {
+  color: #000000;
+}
+
+/* line 417, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/site/secondary/_widgets.scss */
+.icon-grey:hover, .icon-grey:focus {
+  color: #656565;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+/* line 2, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/modules/_infinite-scroll.scss */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+/* line 8, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/modules/_infinite-scroll.scss */
+.infinity-end.neverending .site-footer {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_media.scss */
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+/* line 11, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_media.scss */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_captions.scss */
+.wp-caption {
+  margin-bottom: 2em;
+  max-width: 100%;
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-size: 90%;
+  color: #666666;
+  text-align: center;
+}
+
+/* line 9, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_captions.scss */
+.wp-caption a {
+  color: inherit;
+}
+
+/* line 13, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_captions.scss */
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 17, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_captions.scss */
+.wp-caption .wp-caption-text {
+  margin: .5em 0 1.5em 1em;
+}
+
+@media screen and (min-width: 600px) {
+  /* line 17, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_captions.scss */
+  .wp-caption .wp-caption-text {
+    margin-left: 2em;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  /* line 17, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_captions.scss */
+  .wp-caption .wp-caption-text {
+    margin-left: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+/* line 3, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_galleries.scss */
+.gallery {
+  margin: 1.5em 0;
+}
+
+/* line 7, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_galleries.scss */
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+  padding: 1em;
+}
+
+/* line 14, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_galleries.scss */
+.gallery-item img {
+  display: block;
+}
+
+/* line 18, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_galleries.scss */
+.gallery-item a {
+  display: inline-block;
+  border-bottom: none;
+}
+
+/* line 22, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_galleries.scss */
+.gallery-item a:hover, .gallery-item a:focus {
+  border-bottom: none;
+  box-shadow: none;
+}
+
+/* line 27, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_galleries.scss */
+.gallery-item a:hover img, .gallery-item a:focus img {
+  border-color: #b51c35;
+}
+
+/* line 32, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_galleries.scss */
+.gallery-item a img {
+  padding: .5em;
+  margin: 0 auto;
+  border: 1px solid #fff;
+}
+
+/* line 43, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_galleries.scss */
+.gallery-columns-2 .gallery-item {
+  max-width: 50%;
+}
+
+/* line 48, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_galleries.scss */
+.gallery-columns-3 .gallery-item {
+  max-width: 33.33%;
+}
+
+/* line 52, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_galleries.scss */
+.gallery-columns-4 .gallery-item {
+  max-width: 25%;
+}
+
+/* line 56, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_galleries.scss */
+.gallery-columns-5 .gallery-item {
+  max-width: 20%;
+}
+
+/* line 60, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_galleries.scss */
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66%;
+}
+
+/* line 64, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_galleries.scss */
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28%;
+}
+
+/* line 68, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_galleries.scss */
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%;
+}
+
+/* line 72, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_galleries.scss */
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11%;
+}
+
+/* line 76, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_galleries.scss */
+.gallery-caption {
+  display: block;
+  margin: 0;
+  font-family: "Saira Extra Condensed", "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  border: none;
+}
+
+/*--------------------------------------------------------------
+## Images
+--------------------------------------------------------------*/
+/* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_images.scss */
+.wp-caption.aligncenter,
+.centered-image {
+  max-width: 100vw;
+  margin: 0 -1em;
+}
+
+@media screen and (min-width: 600px) {
+  /* line 1, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_images.scss */
+  .wp-caption.aligncenter,
+  .centered-image {
+    margin: 0 -2em;
+  }
+}
+
+/*--------------------------------------------------------------
+## Icons
+--------------------------------------------------------------*/
+/* SVG Icons base styles */
+/* line 3, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_icons.scss */
+.icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 1em;
+  position: relative;
+  /* Align more nicely with capital letters */
+  top: -0.0625em;
+  vertical-align: middle;
+  width: 1em;
+}
+
+/*--------------------------------------------------------------
+SVG Fallbacks
+--------------------------------------------------------------*/
+/* line 17, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_icons.scss */
+.svg-fallback {
+  display: none;
+}
+
+/* line 21, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_icons.scss */
+.no-svg .svg-fallback {
+  display: inline-block;
+}
+
+/* line 25, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_icons.scss */
+.no-svg .nav-links .svg-fallback {
+  padding: 0 .5em;
+  color: inherit;
+  background: inherit;
+}
+
+/* line 31, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_icons.scss */
+.no-svg .svg-fallback.icon-arrow-long-left:before {
+  content: "←";
+}
+
+/* line 35, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_icons.scss */
+.no-svg .svg-fallback.icon-arrow-long-right:before {
+  content: "→";
+}
+
+/* Social Menu fallbacks */
+/* line 42, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_icons.scss */
+.no-svg .social-menu a {
+  height: auto;
+  width: auto;
+}
+
+/* line 47, U:/public_html/wordpress/wp-content/themes/ewp 2.0/sass/media/_icons.scss */
+.no-svg .social-menu li a .screen-reader-text {
+  clip: auto;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  height: auto;
+  position: relative !important;
+  /* overrides previous !important styles */
+  width: auto;
+}
+
+/*# sourceMappingURL=../style.map */
