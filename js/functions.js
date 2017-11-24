@@ -66,3 +66,21 @@
 
 
 })(jQuery);
+
+/* NATIVE JS
+function getAge(dateString) {
+    var today = new Date();
+    var birthDate = new Date(dateString);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+}
+//Tee variaapeli sellasesta elementistä mihin haluat sen iän tulostaa
+//Tekee vaikka jokaselle omalla nimellä iideen ja jokasesta oman variaapelin?
+var ageP = document.getElementById('age');
+//Sitte vaa lähettää iän muodossa vuosi/kuukausi/päivä stringinä tolle funktiolle
+ageP.innerHTML += getAge("1990/12/05");
+*/
